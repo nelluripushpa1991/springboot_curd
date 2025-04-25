@@ -1,0 +1,26 @@
+{
+"banks":
+[
+  {
+    "accountNumber": 1111111,
+    "balance": "$5000",
+    "name": "Chase",
+    "type": ["online","offline"],
+    "isMonthlyCharge": true
+  },
+  {
+    "accountNumber": 2222222,
+    "balance": "$15000",
+    "name": "City",
+    "type": ["online","offline"],
+    "isMonthlyCharge": false
+  },
+  {
+    "accountNumber": 3333333,
+    "balance": "$500",
+    "name": "Amex",
+    "type": ["online"],
+    "isMonthlyCharge": false
+  }
+]
+}
