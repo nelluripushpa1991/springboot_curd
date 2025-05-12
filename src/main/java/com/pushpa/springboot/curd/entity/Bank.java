@@ -1,7 +1,15 @@
 package com.pushpa.springboot.curd.entity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.List;
 
+@Entity
 public class Bank {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long accountNumber;
     private String name;
     private List<String> type;
