@@ -1,21 +1,17 @@
 package com.pushpa.springboot.curd.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Entity
+@Component
 public class Bank {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long accountNumber;
     private String name;
     private List<String> type;
     private double balance;
     private boolean isMonthlyCharge;
 
+    public Bank() {}
 
     public Bank(long accountNumber, String name, List<String> type, double balance, boolean isMonthlyCharge) {
         this.accountNumber = accountNumber;
@@ -57,11 +53,11 @@ public class Bank {
         this.balance = balance;
     }
 
-    public boolean isMonthlyCcharge() {
+    public boolean isMonthlyCharge() {
         return isMonthlyCharge;
     }
 
-    public void setMonthlyCcharge(boolean monthlyCharge) {
+    public void setMonthlyCharge(boolean monthlyCharge) {
         isMonthlyCharge = monthlyCharge;
     }
     @Override

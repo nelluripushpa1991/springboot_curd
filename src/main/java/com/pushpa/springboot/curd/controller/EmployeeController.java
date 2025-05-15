@@ -12,14 +12,6 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-
-    public EmployeeService getEmployeeService() {
-        return employeeService;
-    }
-
-    public void setEmployeeService(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
     @PostMapping
     public Employee addEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
