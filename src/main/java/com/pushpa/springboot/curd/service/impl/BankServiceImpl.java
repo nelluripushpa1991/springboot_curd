@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pushpa.springboot.curd.entity.Bank;
 import com.pushpa.springboot.curd.service.BankService;
+import com.sun.tools.javac.Main;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -51,7 +52,7 @@ public class BankServiceImpl implements BankService {
 //    public static List<Bank> readDataFromJonFile() {
 //        List<Bank> bankList = new ArrayList<>();
 //        ObjectMapper mapper = new ObjectMapper();
-//        File jsonPath = new File("C:/Users/naren/OneDrive/Desktop/Pushpa/SpringBoot/banks.json");
+//        File jsonPath = new File("C:\\Users\\naren\\OneDrive\\Desktop\\Pushpa\\SpringBoot\\banks.json");
 //        try {
 //            bankList  = mapper.readValue(jsonPath,new TypeReference<List<Bank>>(){});
 //        } catch (IOException e) {
@@ -59,5 +60,26 @@ public class BankServiceImpl implements BankService {
 //            throw new RuntimeException(e);
 //        }
 //        return bankList;
+//    }
+//
+//    public static List<Bank> readDataFromJonFileNew() {
+//        //String filePath = "C:/Users/naren/OneDrive/Desktop/Pushpa/SpringBoot/banks.json";
+//        String filePath = "C:/Users/naren/OneDrive/Desktop/Pushpa/SpringBoot/banks1.json";
+//        //File(Main.class.getClassLoader().getResource("/serviceAccountKey.json").getFile());
+//
+//        try {
+//            List<Bank> objectList = convertJsonFileToObjectList(filePath, Bank.class);
+//            return objectList;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
+//
+//
+//    public static <T> List<T> convertJsonFileToObjectList(String filePath, Class<T> clazz) throws IOException {
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        //return objectMapper.readValue(new File(filePath), new TypeReference<List<T>>() {});
+//        return objectMapper.readValue(new File(Main.class.getClassLoader().getResource("/banks.json").getFile()), new TypeReference<List<T>>() {});
 //    }
 }
